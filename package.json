@@ -33,7 +33,8 @@
 		"lint": "tsc -p tsconfig.json --noEmit && eslint src",
 		"build": "npx build --package=@zenfs/core --globalName ZenFS_Emscripten --entry src/index.ts",
 		"build:docs": "typedoc --out docs --name 'ZenFS Emscripten' src/index.ts",
-		"prepublishOnly": "npm run build"
+		"prepublishOnly": "npm run build",
+		"prepare": "npm run build"
 	},
 	"devDependencies": {
 		"@fal-works/esbuild-plugin-global-externals": "^2.1.2",
